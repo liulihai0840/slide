@@ -1,0 +1,91 @@
+div{
+	width:300px;
+    height:200px;
+	padding:10px 10px 20px 10px;
+	border:1px solid #BFBFBF;
+	position:absolute;
+    top:10%;
+    left:50%;
+    margin-left:-150px;
+	background-color:white;
+	box-shadow:2px 2px 3px #aaaaaa;
+	
+}
+@keyframes myslide1
+{
+	0%{
+		transform:rotate(0deg);
+		-ms-transform:rotate(0deg); 	/* IE 9 */
+		-moz-transform:rotate(0deg); 	/* Firefox */
+		-webkit-transform:rotate(-20deg); /* Safari 和 Chrome */
+		-o-transform:rotate(0deg); 	/* Opera */
+		z-index:1;
+	}
+	25% {
+		transform:translate() rotate(-10deg) ;
+		-ms-transform:rotate(-10deg); 	/* IE 9 */
+		-moz-transform:rotate(-10deg); 	/* Firefox */
+		-webkit-transform:translate(120px, 100px) rotate(-20deg); /* Safari 和 Chrome */
+		-o-transform:rotate(-10deg); 	/* Opera */
+			z-index:1;
+	}
+	50%  {
+		transform:rotate(216deg);
+		-ms-transform:rotate(216deg); 	/* IE 9 */
+		-moz-transform:rotate(216deg); 	/* Firefox */
+		-webkit-transform:translate(215px, 235px) rotate(-40deg); /* Safari 和 Chrome */
+		-o-transform:rotate(216deg); 	/* Opera */
+		z-index:1;
+	}
+	75%  {
+		transform:rotate(288deg);
+		-ms-transform:rotate(288deg); 	/* IE 9 */
+		-moz-transform:rotate(288deg); 	/* Firefox */
+		-webkit-transform:translate(120px, 100px) rotate(-20deg); /* Safari 和 Chrome */
+		-o-transform:rotate(288deg); 	/* Opera */
+		z-index:2;
+	}
+	100% {
+		transform:rotate(360deg);
+		-ms-transform:rotate(360deg); 	/* IE 9 */
+		-moz-transform:rotate(360deg); 	/* Firefox */
+		-webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+		-o-transform:rotate(360deg); 	/* Opera */
+		z-index:3;
+	}
+}
+@-webkit-keyframes upndown {
+	50% {
+		-webkit-transform: scale(1) translateX(-110%);
+		z-index: 1;
+	}
+	to {
+		box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+		-webkit-transform: none; 
+		z-index: 3;
+	}
+}
+#first{
+    background-color:green;
+    z-index:2;
+    -webkit-transition: -webkit-transform 1000ms ease-out;
+	-webkit-transition-property: -webkit-transform;
+	-webkit-transition-delay: 500ms;
+    -webkit-transform: scale(0.96) translateX(3.6%);
+}
+#second{
+    background-color:red;
+    z-index:1;
+  
+}
+
+.stage-1{
+	animation: upndown 3s;
+	-moz-animation: upndown 3s;	/* Firefox */
+	-webkit-animation: upndown 3s infinite forwards ;	/* Safari 和 Chrome */
+	-o-animation: upndown 3s;	/* Opera */
+}
+.stage-2{
+    /*-webkit-transform: scale(1) translateX(-3.6%);*/
+	
+}
